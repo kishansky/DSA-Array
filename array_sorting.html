@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort element in array</title>
+    <script>
+        let data =[3,2,1];
+        for(i=0;i<data.length;i++){
+            for(j=0;j<data.length;j++){
+                console.warn(data);
+                if(data[j]>data[j+1]){
+                    let temp=data[j];
+                    data[j]=data[j+1];
+                    data[j+1]=temp;
+                }
+            }
+        }
+        console.log(data);
+    </script>
+</head>
+<body>
+    <h1>sort element in array</h1>
+</body>
+</html>

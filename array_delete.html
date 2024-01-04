@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        // //static method...
+        // let data =[43,34,4,0,12,86,42,32,98];
+        // let position=3;
+        // for(let i=position;i<data.length-1;i++){
+        //     // console.log(data[i]);
+        //     data[i]=data[i+1];
+        // }
+        // data.length=data.length-1;
+        // console.log(data);
+
+
+        //default method
+        // data.splice(item,1);
+        // console.warn(data);
+        function removeEl(){
+            // console.warn('lll');
+            let data =[43,34,4,0,12,86,42,32,98];
+        let position=document.getElementById('position').value;
+        position=parseInt(position);
+        for(let i=position;i<data.length-1;i++){
+            data[i]=data[i+1];
+        }
+        data.length=data.length-1;
+        console.log(data);
+        }
+        
+    </script>
+</head>
+<body>
+    <h3>Delete element</h3>
+    <input type="text" id="position" placeholder="Enter Position">
+    <button onclick="removeEl()">Remove Element</button>
+</body>
+</html>

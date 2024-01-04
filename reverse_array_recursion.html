@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse array with recursion</title>
+    <script>
+        let data = [5,23,4,36,5,77,8,88.79,87,65];
+        let temp;
+        function customReverse(data,start,end){
+            console.warn(data);
+            if(start<=end){
+            temp=data[start];
+            data[start]=data[end];
+            data[end]=temp;
+            customReverse(data,start+1,end-1);
+            }
+        }
+        customReverse(data,0,data.length-1);
+        // default functon
+        // data.reverse();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

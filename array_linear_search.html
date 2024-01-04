@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>linear search</title>
+    <script>
+        //static method....
+        // let data =[21,32,43,54,76,8,6,74,55,32];
+        // let item=76;
+        // let index=undefined;
+        // for(let i=0;i<data.length;i++){
+        //     if (data[i]===item){
+        //         index=i;
+        //         break;
+        //     }
+        // }
+        // console.warn(index);
+        //default function
+        //console.warn(data.indexOf(item));
+        function searchElement() {
+            let data = [21, 39, 43, 54, 76, 8, 6, 74, 55, 32];
+            let item = document.getElementById('searchEl').value;
+            item= parseInt(item)
+            let index = undefined;
+            for (let i = 0; i < data.length; i++) {
+                if (data[i] === item) {
+                    index = i;
+                    break;
+                }
+            }
+            console.warn(index);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Linear Search</h3>
+    <input type="text" placeholder="item" id="searchEl">  
+    <button onclick="searchElement()">Search Element</button>
+</body>
+
+</html>

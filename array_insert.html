@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>insert element in array</title>
+    <script>
+        //static method
+        // let data=[60,4,5,65,78,98,22,11,32];
+        // let newEl = 97;
+        // let position= 3;
+        // console.log(data);
+
+        // for(let i=data.length-1;i>=0;i--){
+        //     //console.warn(data[i]);
+        //     if(i>=position){
+        //         data[i+1]=data[i];
+        //         if(i==position){
+        //             data[i]=newEl;
+        //         }
+        //     }
+        // }
+        // console.log(data);
+
+        //dynamic method
+        function insertEl(){
+            let data = [];
+            let newEl = document.getElementById('newEl').value;
+            let position = 0;
+            console.log(data);
+
+            for (let i = data.length - 1; i >= 0; i--) {
+                console.warn(data[i]);
+                if (i >= position) {
+                    data[i + 1] = data[i];
+                    if (i == position) {
+                        data[i] = newEl;
+                    }
+                }
+            }
+            console.log(data);
+
+        }
+        //basic default function....
+        // let item=["array data"];
+        // item.splice("position","delete","element")
+    </script>
+</head>
+
+<body>
+    <h3>insert element</h3>
+    <input type="checkbox" value="1" >
+    <input type="text" placeholder="Enter position" id="position" />
+    <input type="text" placeholder="Enter new element"  />
+    <button onclick="insertEl()" id="newEl" value="1">insert element</button>
+</body>
+
+</html>

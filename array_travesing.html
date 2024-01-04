@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array Traversing</title>
+    <script>
+        //static method...
+        // let data = [9, 45, 2, 56, 0, 11, 42, 77];
+        // for(let i=0;i<data.length;i++){
+        //     document.write(("array "+[i]+": "+data[i]) +"<br>");
+        // }
+        // let x=3;
+
+        //dynamic method..
+        function getElement() {
+        let data = [9, 45, 2, 56, 0, 11, 42, 77];
+            let el = document.getElementById('element').value;
+            if (el < data.length && typeof parseInt(el) === "number") {
+                alert(data[el]);
+            } else {
+                alert("Please enter valid input.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Traversing</h3>
+    <input type="text" id="element" placeholder="Input Array Index"/>
+    <button onclick="getElement()">get element</button>
+</body>
+
+</html>
